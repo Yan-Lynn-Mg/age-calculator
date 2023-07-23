@@ -56,8 +56,14 @@ const calculateAge = () => {
     } else {
         inputDate = new Date(yearVal, monthVal - 1, dayVal);
 
-        let yearDiff = date.getFullYear() - inputDate.getFullYear();
-        showYear.innerText = yearDiff;
+        if (monthVal > date.getMonth() + 1) {
+            let yearDiff = date.getFullYear() - inputDate.getFullYear();
+            let exactYearDiff = yearDiff - 1;
+            showYear.innerText = exactYearDiff;
+        } else {
+            let yearDiff = date.getFullYear() - inputDate.getFullYear();
+            showYear.innerText = yearDiff;
+        }
 
         let monthDiff = date.getMonth() - inputDate.getMonth();
         if (date.getMonth() === inputDate.getMonth()) {
