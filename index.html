@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="stylesheet" href="./style.css">
+
+  <title>Frontend Mentor | Age calculator app</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+</head>
+
+<body>
+
+  <div class="container">
+    <!-- top section -->
+    <section class="top">
+
+      <div class="date-input">
+
+        <div class="day-input">
+          <p id="dayHeader">Day</p>
+          <input type="text" id="day" placeholder="DD" required>
+          <p id="dayError">This field is required</p>
+          <p id="dayError2">Must be a valid date</p>
+        </div>
+
+        <div class="month-input">
+          <p id="monthHeader">Month</p>
+          <input type="text" id="month" placeholder="MM">
+          <p id="monthError">This field is required</p>
+          <p id="monthError2">Must be a valid month</p>
+        </div>
+
+        <div class="year-input">
+          <p id="yearHeader">Year</p>
+          <input type="text" id="year" placeholder="YYYY">
+          <p id="yearError">This field is required</p>
+          <p id="yearError2">Must be in the past</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- middle section -->
+    <section class="middle">
+      <div class="wrapper">
+        <div class="line"></div>
+        <div class="img-container">
+          <img src="./assets/images/icon-arrow.svg" class="arrow" alt="arrow img">
+        </div>
+      </div>
+    </section>
+
+    <!-- footer section -->
+    <section class="footer">
+      <div class="age-container">
+
+        <div class="years">
+          <span class="year-num">- -</span>
+          <span class="text-year">years</span>
+        </div>
+
+        <div class="months">
+          <span class="month-num">- -</span>
+          <span class="text-month">months</span>
+        </div>
+
+        <div class="days">
+          <span class="day-num">- -</span>
+          <span class="text-day">days</span>
+        </div>
+      </div>
+    </section>
+  </div>
+
+
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a href="#">Yan Lynn Mg</a>.
+  </div>
+</body>
+<script src="app.js"></script>
+
+</html>

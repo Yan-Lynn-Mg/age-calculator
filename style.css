@@ -1,0 +1,260 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,800&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+:root {
+
+    --regular: 'Poppins', sans-serif;
+    --Purple: hsl(259, 100%, 65%);
+    --Lightred: hsl(0, 100%, 67%);
+    --White: hsl(0, 0%, 100%);
+    --Offwhite: hsl(0, 0%, 94%);
+    --Lightgrey: hsl(0, 0%, 86%);
+    --Smokeygrey: hsl(0, 1%, 44%);
+    --Offblack: hsl(0, 0%, 8%);
+}
+
+body {
+    height: 100vh;
+    background-color: var(--Offwhite);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    width: 700px;
+    height: 540px;
+    background-color: var(--White);
+    border-radius: 20px;
+    border-bottom-right-radius: 180px;
+}
+
+.top {
+    width: 100%;
+    max-height: 200px;
+    /* background-color: rgb(40, 180, 161); */
+}
+
+.date-input {
+    width: 75%;
+    height: 100px;
+    /* background-color: blue; */
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 40px;
+}
+
+.date-input .day-input,
+.month-input,
+.year-input {
+    height: 100px;
+
+}
+
+.date-input #dayHeader,
+.date-input #monthHeader,
+.date-input #yearHeader {
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: .7rem;
+    letter-spacing: .2rem;
+    color: var(--Smokeygrey);
+    font-family: var(--regular);
+    margin-bottom: 7px;
+}
+
+.date-input input {
+    width: 120px;
+    height: 60px;
+    border-radius: 8px;
+    font-size: 32px;
+    font-weight: 700;
+    color: var(--Offblack);
+    font-family: var(--regular);
+    font-style: normal;
+    padding-left: 9px;
+    border: 1px solid var(--Smokeygrey);
+}
+
+.date-input .day-input #dayError,
+#dayError2,
+.month-input #monthError,
+#monthError2,
+.year-input #yearError,
+#yearError2 {
+    margin-top: 8px;
+    color: red;
+    font-family: var(--regular);
+    font-style: italic;
+    font-size: .5rem;
+    opacity: 0.5;
+    letter-spacing: normal;
+    display: none;
+}
+
+/* middle section */
+
+.middle {
+    width: 100%;
+    margin-top: 9px;
+}
+
+.wrapper {
+    width: 80%;
+    margin-left: 40px;
+    display: flex;
+    align-items: center;
+}
+
+.line {
+    width: 90%;
+    height: 2px;
+    background-color: var(--Lightgrey);
+}
+
+.img-container {
+    width: 80px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    clip-path: circle();
+    background-color: var(--Purple);
+    cursor: pointer;
+    transition: background-color ease-in-out 0.5s;
+}
+
+.img-container:hover {
+    background-color: var(--Offblack);
+}
+
+.img-container .arrow {
+    padding: 20px;
+}
+
+/* footer section */
+.footer {
+    width: 100%;
+    /* background-color: red; */
+}
+
+.footer .age-container {
+    width: 70%;
+    padding-left: 50px;
+    /* background-color: blue; */
+}
+
+.age-container .years,
+.months,
+.days {
+    font-size: 4rem;
+    font-family: var(--regular);
+    font-weight: 800;
+    font-style: italic;
+}
+
+.age-container .years .year-num,
+.age-container .months .month-num,
+.age-container .days .day-num {
+    color: var(--Purple);
+}
+
+.age-container .years .text-year,
+.age-container .months .text-month,
+.age-container .days .text-day {
+    color: var(--Offblack);
+}
+
+.attribution {
+    margin-top: 20px;
+}
+
+/* responsive */
+@media(max-width:576px) {
+    .container {
+        width: 90%;
+    }
+
+    .container .top {
+        width: 100%;
+    }
+
+    .container .top .date-input {
+        width: 100%;
+    }
+
+    .date-input p {
+        font-size: .4rem;
+    }
+
+    .date-input input {
+        width: 85px;
+        height: 50px;
+        font-size: 20px;
+    }
+
+    .date-input .day-input #dayError,
+    .month-input #monthError,
+    .year-input #yearError {
+        font-size: 0.34rem;
+    }
+
+    .middle {
+        margin-top: 40px;
+    }
+
+    .wrapper {
+        width: 100%;
+        margin-left: 0px;
+        flex-direction: column;
+        position: relative;
+    }
+
+    .wrapper .img-container {
+        width: 60px;
+        height: 60px;
+        position: absolute;
+        top: -30px;
+    }
+
+    .footer .age-container {
+        width: 100%;
+        padding-left: 40px;
+        margin-top: 50px;
+    }
+
+    .age-container .years,
+    .months,
+    .days {
+        font-size: 3.2rem;
+    }
+
+
+}
+
+@media(max-width:720px) {
+    .container {
+        width: 90%;
+    }
+
+    .footer .age-container {
+        width: 100%;
+    }
+}
